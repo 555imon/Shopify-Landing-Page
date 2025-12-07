@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
-import heroImg from "@assets/generated_images/laptop_displaying_fashion_ecommerce_site.png";
+
+// Import generated mobile UI images
+import mobileFashion from "@assets/generated_images/mobile_ui_of_a_modern_fashion_store.png";
+import mobileCoffee from "@assets/generated_images/mobile_ui_of_a_specialty_coffee_shop.png";
+import mobileFurniture from "@assets/generated_images/mobile_ui_of_a_minimalist_furniture_brand.png";
+import mobileTech from "@assets/generated_images/mobile_ui_of_a_tech_accessories_store.png";
+import mobileSkincare from "@assets/generated_images/mobile_ui_of_a_skincare_brand.png";
+import mobileSports from "@assets/generated_images/mobile_ui_of_a_sports_equipment_store.png";
+
+const column1 = [mobileFashion, mobileCoffee, mobileFurniture, mobileFashion, mobileCoffee, mobileFurniture];
+const column2 = [mobileTech, mobileSkincare, mobileSports, mobileTech, mobileSkincare, mobileSports];
 
 export function Hero() {
   return (
@@ -58,26 +68,36 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Visual Mockup */}
+          {/* Right Column: Animated Scrolling Mockups */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="relative hidden lg:block h-[600px] overflow-hidden mask-image-gradient"
+            style={{
+              maskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
+              WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)"
+            }}
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-700 ease-out">
-              <img
-                src={heroImg}
-                alt="Shopify Store Mockup"
-                className="w-full h-auto object-cover"
-              />
-              {/* Overlay Gradient for depth */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent pointer-events-none" />
+            <div className="grid grid-cols-2 gap-6 h-full transform rotate-[-5deg] scale-110 origin-center">
+              {/* Column 1 - Scroll Up */}
+              <div className="flex flex-col gap-6 animate-marquee-y">
+                {column1.map((img, i) => (
+                  <div key={`col1-${i}`} className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/10 shrink-0">
+                    <img src={img} alt="Client Project" className="w-full h-auto object-cover" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Column 2 - Scroll Down (Reverse) */}
+              <div className="flex flex-col gap-6 animate-marquee-y-reverse">
+                {column2.map((img, i) => (
+                  <div key={`col2-${i}`} className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/10 shrink-0">
+                    <img src={img} alt="Client Project" className="w-full h-auto object-cover" />
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            {/* Decorative Elements behind image */}
-            <div className="absolute -inset-4 border border-white/5 rounded-2xl z-0 transform rotate-[2deg]" />
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full" />
           </motion.div>
         </div>
       </div>
