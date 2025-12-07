@@ -1,0 +1,124 @@
+Build a high converting one pager landing page for a shopify agency.
+
+Here are 2 links that come close to the desired results:
+https://tante-e.com/
+https://brand-boosting.de/
+
+DESIGN INSPIRATION:
+The design embodies a modern, professional B2B/enterprise aesthetic with a clean, confidence-inspiring feel. It balances corporate professionalism with contemporary web design trends, featuring generous white space, structured layouts, and strategic use of imagery. The vibe is sophisticated, trustworthy, and service-focused—positioning the agency as premium experts rather than flashy creatives.
+
+
+SECTIONS
+
+1. HERO SECTION:
+- Full-screen with large statement text
+- Eyebrow label: “Shopify Agentur”
+- Name/title in huge bold typography: “Shopify Agentur auf höchstem Niveau”
+- CTA button (e.g., “Unverbindliches Gespräch buchen”)
+- Minimal tagline "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore"
+- Sleek navigation that links to sections of the page
+- Bold typography
+- Dark background.
+
+2. LOGO Section
+- Animated Logo section  
+
+3. USP SECTION:
+- Describe our USPs:
+   - Nahtlose Integrationen in ERP Systeme
+   - Partner auf Augenhöhe
+   - Modernste Technologie mit AI Unterstütztung
+   - Text with icons and numbers
+
+4. CASE STUDIES SECTION
+- 4 to 6 Case studies with images and a short text over oder under the image.
+
+5. PROCESS SECTION
+- How we work: 1. Design & Datenimport, 2. Theme Anpassungen & erweiterungen, 3. Go Live 4. Skalierung
+
+6. CALL TO ACTION BOX
+Dark section with light text.
+Left column:
+Heading: “Jetzt Ihr kostenloses Erstgespräch sichern”
+Short description paragraph
+Button: “Zur Terminbuchung”
+Right column:
+Founder card with:
+Founder photo placeholder
+Name and title
+Signature graphic placeholder
+Tone: personal, authoritative, trust-building.
+
+
+7. FAQ SECTION
+- FAQ section with expandable (accordions) questions. 
+- Simple, card-like layout with border + rounded corners.
+
+7. FOOTER
+Contact/Social - Clean footer with links
+
+
+DESIGN DETAILS:
+- Strong visual hierarchy
+- clear typographic hierarchy with strong headlines + explanatory paragraphs + list-like submodules.
+- Modern Sans Serif font (lean minimal)
+- Grid-based layout
+-Lots of spacing and breathable sections
+- Likely a centered, fixed-width content container (e.g. 1180-1280px) with generous padding.
+- Sections stacked vertically, each with top and bottom padding (e.g. 64–96px).
+- Within each section, a 2–4 column grid on desktop, collapsing to single column on mobile.
+- Smooth scroll animations
+- Hover effects on images (scale, overlay, etc.)
+- Mobile responsive
+- Fast, clean, professional
+- Buttons appear with verbs: “Erstgespräch buchen” “Jetzt Anfrage stellen” “Zur Terminbuchung” “Nächster Schritt” “Absenden” “Jetzt anmelden” (newsletter)
+A premium, modern agency website layout
+
+LOGO:
+- Top left is the logo.
+- Logo is "dgtl" and a dot (".") the dot has a different color than the text ("dgtl")
+
+COLORS:
+- Most sections are bright 
+- Header section and Call to action box are dark
+- Dark sections: dark blue (maybe with a slight gradient)
+- Use a vibrant enganging orange for primary buttons
+- Use different greys for smooth colors
+
+
+
+TECHNICAL:
+- Modern CSS (Grid, Flexbox)
+- Smooth transitions and animations
+- Image optimization
+- Clean, semantic HTML
+
+Here is a HTML input for the FAQ section:
+<div class="faq-list">
+            <article class="faq-item">
+              <h3>Für wen eignet sich eine Shopify Agentur?</h3>
+              <p>
+                Für Marken und Händler, die E-Commerce ernsthaft und
+                professionell aufbauen oder skalieren möchten.
+              </p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Wie läuft ein Projekt typischerweise ab?</h3>
+              <p>
+                Wir starten mit einem Kickoff, definieren Ziele, erstellen ein
+                Konzept und setzen dieses iterativ um.
+              </p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Mit welchen Budgets sollten wir planen?</h3>
+              <p>
+                Das hängt vom Umfang ab – in einem Erstgespräch klären wir, was
+                sinnvoll ist und erstellen ein Angebot.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
