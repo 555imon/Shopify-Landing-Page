@@ -50,7 +50,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-b from-[#00c4b8] to-[#008f86] hover:from-[#00d6c9] hover:to-[#00a196] border-none text-white font-semibold text-lg px-8 h-14 rounded-full w-full sm:w-auto shadow-[0_4px_14px_0_rgba(0,166,156,0.39)] transition-all hover:scale-105 hover:shadow-[0_6px_20px_rgba(0,166,156,0.23)]"
+                className="bg-gradient-to-b from-[#39a76b] to-[#2a8050] hover:from-[#45bc7a] hover:to-[#32915c] border-none text-white font-semibold text-lg px-8 h-14 rounded-full w-full sm:w-auto shadow-[0_4px_14px_0_rgba(57,167,107,0.39)] transition-all hover:scale-105 hover:shadow-[0_6px_20px_rgba(57,167,107,0.23)]"
               >
                 Erstgespräch buchen
               </Button>

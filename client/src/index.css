@@ -47,8 +47,8 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  /* High Converting Green (#00a69c) */
-  --primary: 176 100% 33%;
+  /* High Converting Green (#39a76b) */
+  --primary: 147.3 49.1% 43.9%;
   --primary-foreground: 0 0% 100%;
 
   /* Dark Blue for Secondary/Dark Sections */
@@ -66,7 +66,7 @@
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 24 95% 53%;
+  --ring: 147.3 49.1% 43.9%;
 
   --radius: 0.5rem;
 }

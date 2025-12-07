@@ -50,7 +50,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Button className="bg-gradient-to-b from-[#00c4b8] to-[#008f86] hover:from-[#00d6c9] hover:to-[#00a196] border-none text-white font-medium rounded-full px-6 shadow-lg shadow-primary/20">
+          <Button className="bg-gradient-to-b from-[#39a76b] to-[#2a8050] hover:from-[#45bc7a] hover:to-[#32915c] border-none text-white font-medium rounded-full px-6 shadow-lg shadow-primary/20">
             Gespräch buchen
           </Button>
         </div>
