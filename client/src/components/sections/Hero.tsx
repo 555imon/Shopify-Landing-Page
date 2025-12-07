@@ -73,29 +73,37 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="relative hidden lg:block h-[600px] overflow-hidden mask-image-gradient"
+            className="relative hidden lg:block h-[600px]"
             style={{
-              maskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
-              WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)"
+              maskImage: "linear-gradient(to right, transparent, black 60%)",
+              WebkitMaskImage: "linear-gradient(to right, transparent, black 60%)"
             }}
           >
-            <div className="grid grid-cols-2 gap-6 h-full transform rotate-[-5deg] scale-110 origin-center">
-              {/* Column 1 - Scroll Up */}
-              <div className="flex flex-col gap-6 animate-marquee-y">
-                {column1.map((img, i) => (
-                  <div key={`col1-${i}`} className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/10 shrink-0">
-                    <img src={img} alt="Client Project" className="w-full h-auto object-cover" />
-                  </div>
-                ))}
-              </div>
+            <div 
+              className="h-full overflow-hidden"
+              style={{
+                maskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
+                WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)"
+              }}
+            >
+              <div className="grid grid-cols-2 gap-6 h-full transform rotate-[-5deg] scale-110 origin-center">
+                {/* Column 1 - Scroll Up */}
+                <div className="flex flex-col gap-6 animate-marquee-y">
+                  {column1.map((img, i) => (
+                    <div key={`col1-${i}`} className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/10 shrink-0">
+                      <img src={img} alt="Client Project" className="w-full h-auto object-cover" />
+                    </div>
+                  ))}
+                </div>
 
-              {/* Column 2 - Scroll Down (Reverse) */}
-              <div className="flex flex-col gap-6 animate-marquee-y-reverse">
-                {column2.map((img, i) => (
-                  <div key={`col2-${i}`} className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/10 shrink-0">
-                    <img src={img} alt="Client Project" className="w-full h-auto object-cover" />
-                  </div>
-                ))}
+                {/* Column 2 - Scroll Down (Reverse) */}
+                <div className="flex flex-col gap-6 animate-marquee-y-reverse">
+                  {column2.map((img, i) => (
+                    <div key={`col2-${i}`} className="relative rounded-[2rem] overflow-hidden shadow-2xl border-[6px] border-white/10 shrink-0">
+                      <img src={img} alt="Client Project" className="w-full h-auto object-cover" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
