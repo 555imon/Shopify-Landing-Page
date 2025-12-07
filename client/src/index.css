@@ -47,8 +47,8 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  /* Vibrant Orange for Primary Actions */
-  --primary: 24 95% 53%; /* #f97316 */
+  /* High Converting Green (#00a69c) */
+  --primary: 176 100% 33%;
   --primary-foreground: 0 0% 100%;
 
   /* Dark Blue for Secondary/Dark Sections */
@@ -98,7 +98,7 @@
 
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
-  --ring: 24 95% 53%;
+  --ring: 176 100% 33%;
 }
 
 @layer base {

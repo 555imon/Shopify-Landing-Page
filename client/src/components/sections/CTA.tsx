@@ -32,7 +32,7 @@ export function CTA() {
                 ))}
               </ul>
 
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 h-16 rounded-full w-full sm:w-auto shadow-lg hover:shadow-primary/25 transition-all">
+              <Button size="lg" className="bg-gradient-to-b from-[#00c4b8] to-[#008f86] hover:from-[#00d6c9] hover:to-[#00a196] text-white font-bold text-lg px-10 h-16 rounded-full w-full sm:w-auto shadow-lg hover:shadow-primary/25 transition-all border-none">
                 Zur Terminbuchung
               </Button>
             </div>
