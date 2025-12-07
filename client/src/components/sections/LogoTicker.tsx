@@ -11,8 +11,8 @@ export function LogoTicker() {
         <p className="text-sm text-gray-500 uppercase tracking-widest font-medium">Technologie Partner</p>
       </div>
       
-      <div className="relative flex overflow-x-hidden group">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-16 px-8">
+      <div className="flex overflow-hidden group select-none">
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-16 pr-16 shrink-0">
           {[...logos, ...logos, ...logos].map((logo, idx) => (
             <span 
               key={`${logo}-${idx}`} 
@@ -23,7 +23,7 @@ export function LogoTicker() {
           ))}
         </div>
         
-        <div className="absolute top-0 left-[100%] animate-marquee2 whitespace-nowrap flex items-center gap-16 px-8">
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-16 pr-16 shrink-0">
            {[...logos, ...logos, ...logos].map((logo, idx) => (
             <span 
               key={`${logo}-dup-${idx}`} 
