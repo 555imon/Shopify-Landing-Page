@@ -1,0 +1,56 @@
+Failed
+2:15:39 PM: Netlify Build                                                 
+2:15:39 PM: ────────────────────────────────────────────────────────────────
+2:15:39 PM: ​
+2:15:39 PM: ❯ Version
+2:15:39 PM:   @netlify/build 35.5.2
+2:15:39 PM: ​
+2:15:39 PM: ❯ Flags
+2:15:39 PM:   accountId: 6936a519c7d983f10eae8abb
+2:15:39 PM:   baseRelDir: true
+2:15:39 PM:   buildId: 6936cf73502500000864c1df
+2:15:39 PM:   deployId: 6936cf73502500000864c1e1
+2:15:39 PM: ​
+2:15:39 PM: ❯ Current directory
+2:15:39 PM:   /opt/build/repo/client
+2:15:39 PM: ​
+2:15:39 PM: ❯ Config file
+2:15:39 PM:   /opt/build/repo/netlify.toml
+2:15:39 PM: ​
+2:15:39 PM: ❯ Context
+2:15:39 PM:   production
+2:15:39 PM: ​
+2:15:39 PM: build.command from netlify.toml                               
+2:15:39 PM: ────────────────────────────────────────────────────────────────
+2:15:39 PM: ​
+2:15:39 PM: $ cd .. && npm run build
+2:15:39 PM: > rest-express@1.0.0 build
+2:15:39 PM: > tsx script/build.ts
+2:15:39 PM: sh: 1: tsx: not found
+2:15:39 PM: ​
+2:15:39 PM: "build.command" failed                                        
+2:15:39 PM: ────────────────────────────────────────────────────────────────
+2:15:39 PM: ​
+2:15:39 PM:   Error message
+2:15:39 PM:   Command failed with exit code 127: cd .. && npm run build (https://ntl.fyi/exit-code-127)
+2:15:39 PM: ​
+2:15:39 PM:   Error location
+2:15:39 PM:   In build.command from netlify.toml:
+2:15:39 PM:   cd .. && npm run build
+2:15:39 PM: ​
+2:15:39 PM:   Resolved config
+2:15:39 PM:   build:
+2:15:39 PM:     base: /opt/build/repo/client
+2:15:39 PM:     command: cd .. && npm run build
+2:15:39 PM:     commandOrigin: config
+2:15:39 PM:     publish: /opt/build/repo/dist/public
+2:15:39 PM:     publishOrigin: config
+2:15:39 PM:   redirects:
+2:15:40 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+2:15:40 PM:     - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+2:15:40 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+2:15:40 PM: Failing build: Failed to build site
+2:15:40 PM: Finished processing build request in 6.702s
