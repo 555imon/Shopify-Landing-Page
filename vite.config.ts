@@ -1,4 +1,16 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  root: 'client',       
+  build: {
+    outDir: 'dist',      
+    emptyOutDir: true,
+  },
+})
+
+
+
+
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
