@@ -1,0 +1,9 @@
+[build]
+  base = "client"
+  publish = "../dist/public"
+  command = "cd .. && npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
