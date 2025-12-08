@@ -36,7 +36,7 @@ export function Hero() {
             </span>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
-              Shopify Agentur auf <br />
+              Typo3 Agentur auf <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
                 höchstem Niveau
               </span>
