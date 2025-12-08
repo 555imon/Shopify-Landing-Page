@@ -1,7 +1,9 @@
 [build]
-  base = "/"
   publish = "dist/public"
-  command = "npm install && npx vite build --outDir dist/public"
+  command = "npm install && npx vite build --config vite.config.netlify.ts"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 [[redirects]]
   from = "/*"
