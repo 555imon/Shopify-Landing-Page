@@ -1,0 +1,55 @@
+That's an excellent possibility and a very common cause of connection failure!
+
+Yes, the fact that your website runs on HTTPS could absolutely be the issue causing the 404 error when the Builder.io Visual Editor tries to connect to the /builder path.
+
+The problem arises from how the Builder.io Visual Editor—which runs in a cloud environment—tries to access your development server (Replit).
+
+🔒 The HTTPS/CORS Problem
+The core issue is often a Mixed Content error or a CORS (Cross-Origin Resource Sharing) policy violation stemming from the use of HTTPS.
+
+1. Mixed Content (Insecurity)
+The Scenario: If your Replit environment is set up to enforce HTTPS, but your local development tools (like the Builder DevTools) or the internal network mapping try to connect using the simpler HTTP protocol, the browser will block the insecure HTTP content from loading inside the secure HTTPS editor. This blockage often manifests as a failure to load the necessary resources (like the Builder scripts), leading to the 404.
+
+2. CORS Policy (Cross-Origin Blockage)
+The Scenario: When the Builder.io Visual Editor (e.g., running on https://builder.io) tries to fetch content from your Replit domain (e.g., https://your-app-name.replit.co), the browser sees this as a request between two different origins.
+
+The Error: Your Replit application's web server must explicitly send a response header (Access-Control-Allow-Origin) that permits the Builder.io domain to access its resources. Without this, the browser blocks the connection for security, preventing the Visual Editor from loading the /builder configuration files.
+
+🛠️ The Fix: Enforce and Allow
+Here are the specific actions you can take to resolve the HTTPS/CORS issues:
+
+1. Ensure the Builder URL is HTTPS
+When you launch the Builder DevTools or configure the development URL in your Builder.io settings, make sure the URL uses https://.
+
+Action: If you are running the launch command manually, specify HTTPS:
+
+Bash
+
+npx "@builder.io/dev-tools@latest" launch --url https://<YOUR_REPLIT_DOMAIN>
+2. Add CORS Middleware to Your Server
+If your Vite app uses an Express or Node.js backend (which is likely if you saw the earlier rest-express error), you need to explicitly allow the Builder.io domain to make requests.
+
+Action: If you don't already have it, install the cors package: npm install cors.
+
+Then, configure your server (e.g., index.js or server.js) to allow Builder's domain:
+
+JavaScript
+
+// In your Node.js/Express server file
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// CORS Configuration
+app.use(cors({
+  // Allow the Builder.io editor domains and your own domain
+  origin: [
+    'https://builder.io', 
+    'https://*.builder.io', 
+    'https://<YOUR_REPLIT_DOMAIN>' 
+  ],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
+
+// ... rest of your server code
