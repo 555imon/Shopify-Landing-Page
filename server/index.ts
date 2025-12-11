@@ -20,6 +20,8 @@ app.use(cors({
     /\.replit\.app$/,
     /\.replit\.dev$/,
     /\.replit\.co$/,
+    /^http:\/\/172\.\d+\.\d+\.\d+/,
+    /^http:\/\/localhost/,
   ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   credentials: true,
